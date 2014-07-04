@@ -1,0 +1,926 @@
+/* ... Basic ...
+-------------------------------------------------------------------------------------------------*/
+@media (min-width: 1000px) {
+  html {
+    overflow-y: scroll;
+  }
+}
+#header {
+  position: relative;
+}
+#header > div {
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+#footer {
+  clear: both;
+}
+#tl_ajaxOverlay {
+  z-index: 7;
+}
+.tl_tip {
+  cursor: help;
+}
+fieldset.bte_fs {
+  padding-top: 0;
+  padding-bottom: 20px;
+  background-color: #fff;
+}
+fieldset.bte_fs.collapsed {
+  padding-bottom: 0;
+}
+fieldset.bte_fs.collapsed:last-child {
+  padding-bottom: 20px;
+}
+fieldset.bte_fs > legend {
+  padding: 6px 3px 6px 18px;
+}
+.tl_help a {
+  text-decoration: underline;
+}
+.tl_help a:hover,
+.tl_help a:focus,
+.tl_help a:active {
+  color: #161514;
+  text-decoration: none;
+}
+.tl_textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.tl_header {
+  width: auto;
+}
+/* ... Basic ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... Patch mysterious onscroll 1 pixel offset bug on #main ...
+-------------------------------------------------------------------------------------------------*/
+.tl_checkbox_wizard legend a,
+.tl_checkbox_wizard legend img {
+  display: block;
+}
+.tl_checkbox_wizard legend a {
+  float: right;
+  padding-left: 3px;
+}
+/* ... Patch mysterious onscroll 1 pixel offset bug on #main ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... FixLeft ...
+-------------------------------------------------------------------------------------------------*/
+.bte_fixLeft #left {
+  position: fixed;
+  float: none;
+}
+.bte_fixLeft #main {
+  float: none;
+  margin-left: 215px;
+}
+/* ... FixLeft ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... FixHeader ...
+-------------------------------------------------------------------------------------------------*/
+.bte_fixHeader {
+  background-attachment: fixed;
+}
+.bte_fixHeader #header:before {
+  background: url(../../../themes/default/images/hbg.jpg) repeat-x fixed 0 0 #F5F5F5;
+  content: "";
+  height: 18px;
+  left: -5px;
+  position: absolute;
+  top: -19px;
+  width: 970px;
+}
+.bte_fixHeader #header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 958px;
+  z-index: 8;
+}
+.bte_fixHeader #container {
+  border-top: 91px solid transparent;
+}
+.bte_fixHeader #header {
+  max-height: 53px;
+}
+.bte_fixHeader .tl_permalert {
+  position: absolute;
+  left: 5px;
+  top: 23px;
+  width: 150px;
+  height: 32px;
+  border: 0 none;
+  overflow: hidden;
+  padding-top: 0;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+  hyphens: auto;
+  z-index: 1;
+}
+.bte_fixHeader .tl_permalert:hover {
+  height: auto;
+  background: -webkit-linear-gradient(bottom, #333333, #666666 80%);
+  background:    -moz-linear-gradient(bottom, #333333, #666666 80%);
+  background:     -ms-linear-gradient(bottom, #333333, #666666 80%);
+  background:      -o-linear-gradient(bottom, #333333, #666666 80%);
+  background: linear-gradient(to top, #333333, #666666 80%);
+  color: #fff;
+}
+.bte_infoTop {
+  color: #c33;
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+}
+.bte_fixHeader .tl_permalert:hover .bte_infoTop {
+  color: #fff;
+}
+.bte_fixHeader .tl_permalert a {
+  margin: 0 0 7px;
+  padding-left: 0;
+  padding-right: 0;
+  float: none;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+/* ... FixHeader ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... Fix buttons to top ...
+-------------------------------------------------------------------------------------------------*/
+.bte_fixTop #header > div span {
+  display: inline-block;
+  position: relative;
+  top: -26px;
+}
+.bte_fixTop #header > div span a {
+  color: #fff;
+}
+.bte_fixTop .tl_formbody_submit {
+  position: fixed;
+  top: 48px;
+  margin-right: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 8;
+}
+.bte_fixTop .tl_formbody_submit .tl_submit_container {
+  background: transparent;
+  border: 0 none;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 6px;
+}
+.bte_fixTop .tl_formbody_submit .tl_submit_container form {
+  float: none !important; /** composer */
+  display: inline-block; /** composer */
+}
+#top.bte_fixTop  input.tl_submit {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 12px;
+}
+/* ... Fix buttons to top ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... Fix buttons to bottom ...
+-------------------------------------------------------------------------------------------------*/
+.bte_fixBottom #container > .clear {
+  display: none;
+}
+.bte_fixBottom .tl_formbody_submit {
+  position: absolute;
+  width: 755px;
+  background: #F5F5F5;
+  -webkit-border-radius: 0 0 3px 3px;
+     -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  border: 0 none;
+  margin: 2px 0 0 -7px;
+  padding-bottom: 40px;
+  z-index: 7;
+}
+.bte_fixBottom .tl_formbody_submit.bte_fixed {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+  border-radius: 0;
+  bottom: 0;
+  position: fixed;
+}
+.bte_fixBottom .tl_formbody_submit .tl_submit_container {
+  border: 1px solid #bbb;
+  border-color: transparent #bbb #bbb;
+  -webkit-border-radius: 0 0 3px 3px;
+     -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  -webkit-box-shadow: 0 3px 6px 0 #ccc;
+     -moz-box-shadow: 0 3px 6px 0 #ccc;
+  box-shadow: 0 3px 6px 0 #ccc;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.bte_fixBottom .tl_formbody_submit.bte_fixed .tl_submit_container:before {
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #bbb);
+  background-image:    -moz-linear-gradient(top, rgba(255, 255, 255, 0), #bbb);
+  background-image:     -ms-linear-gradient(top, rgba(255, 255, 255, 0), #bbb);
+  background-image:      -o-linear-gradient(top, rgba(255, 255, 255, 0), #bbb);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #bbb);
+  content: "";
+  height: 10px;
+  left: 6px;
+  position: absolute;
+  top: -10px;
+  width: 743px;
+}
+.bte_fixBottom .tl_formbody_submit.bte_fixed .tl_submit_container {
+  border-color: #bbb;
+}
+.bte_fixBottom #main.bte_buttons {
+  -webkit-border-radius: 3px 3px 0 0;
+     -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+.bte_fixBottom #footer {
+  padding-right: 7px;
+}
+.bte_fixBottom #footer.bte_fixed {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 7px;
+  text-align: left;
+  top: 60px;
+  width: auto;
+}
+.bte_fixBottom .chzn-drop {
+  height: 0;
+  overflow: hidden;
+}
+.bte_fixBottom .chzn-container-active .chzn-drop {
+  height: auto;
+  overflow: visible;
+}
+/* ... Fix buttons to bottom ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... Fix buttons to bottom styled ...
+-------------------------------------------------------------------------------------------------*/
+.bte_style.bte_fixBottom .tl_formbody_submit {
+  width: 745px;
+  background: #161514;
+  border-top: 1px solid #bbb;
+  margin: 1px 0 0;
+}
+.bte_style.bte_fixBottom .tl_formbody_submit.bte_fixed {
+  -webkit-box-shadow: 0 -5px 15px 0 rgba(22,21,20,.5);
+     -moz-box-shadow: 0 -5px 15px 0 rgba(22,21,20,.5);
+  box-shadow: 0 -5px 15px 0 rgba(22,21,20,.5);
+}
+.bte_style.bte_fixBottom .tl_formbody_submit.bte_fixed .tl_submit_container:before {
+  display: none;
+}
+.bte_style.bte_fixBottom .tl_formbody_submit .tl_submit_container {
+  border: 1px solid #fff;
+  border-width: 1px 0;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+  margin: 0;
+}
+.bte_style.bte_fixBottom .tl_formbody_submit.bte_fixed .tl_submit_container {
+  border-color: #fff;
+}
+/* ... Fix buttons to bottom styled ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... SmallCePreview ...
+-------------------------------------------------------------------------------------------------*/
+.bte_smallCe .limit_height {
+  padding-left: 30px;
+}
+.bte_smallCe .limit_height > div > h1,
+.bte_smallCe .limit_height > div > h2,
+.bte_smallCe .limit_height > div > h3,
+.bte_smallCe .limit_height > div > h4,
+.bte_smallCe .limit_height > div > h5,
+.bte_smallCe .limit_height > div > h6 {
+  margin-top: 0;
+  margin-bottom: .25em;
+}
+.bte_smallCe .limit_toggler {
+  position: absolute;
+  left: 3px;
+  top: 50px;
+}
+.bte_smallCe .cte_type {
+  margin-bottom: 0 !important;
+}
+.bte_smallCe .tl_content {
+  padding-top: 3px !important;
+}
+.bte_smallCe img[src$="expand_.gif"] {
+  display: none !important;
+}
+.bte_smallCe .tl_listing_container.parent_view .tl_header {
+  height: 16px;
+  overflow: hidden;
+  -webkit-transition: height .2s ease-in 0s;
+     -moz-transition: height .2s ease-in 0s;
+       -o-transition: height .2s ease-in 0s;
+  transition: height .2s ease-in 0s;
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+.bte_smallCe .tl_listing_container.parent_view .tl_header.bte_hover {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: zoom-out;
+}
+.bte_smallCe .tl_listing_container.parent_view .tl_header_table tr:first-child td:last-child {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+.bte_smallCe .tl_listing_container.parent_view .tl_header_table tr:nth-child(1n+2) {
+  display: none;
+}
+.bte_smallCe .tl_listing_container.parent_view .tl_header.bte_hover tr:nth-child(1n+2) {
+  display: table-row;
+}
+/* ... SmallCePreview ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... MoveTips ...
+-------------------------------------------------------------------------------------------------*/
+.bte_moveTips .tip {
+  padding: 0;
+}
+.bte_moveTips .tip-top {
+  display: none;
+}
+.bte_moveTips .tip-title {
+  position: fixed;
+  left: -606px;
+  right: 0;
+  top: 49px;
+  margin: 0 auto;
+  width: 330px;
+  word-wrap: break-word;
+  background: -webkit-linear-gradient(bottom, #333 0px, #666 80%) #666;
+  background:    -moz-linear-gradient(bottom, #333 0px, #666 80%) #666;
+  background:     -ms-linear-gradient(bottom, #333 0px, #666 80%) #666;
+  background:      -o-linear-gradient(bottom, #333 0px, #666 80%) #666;
+  background: linear-gradient(to top, #333 0px, #666 80%) #666;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 3px #666;
+     -moz-box-shadow: 1px 1px 3px #666;
+  box-shadow: 1px 1px 3px #666;
+  overflow: hidden;
+}
+.bte_moveTips .tip-title,
+.bte_moveTips .tip-text {
+  padding: 8px 10px 12px;
+}
+.bte_moveTips .tip-title:empty,
+.bte_moveTips .tip-text:empty {
+  padding: 0;
+}
+/* ... MoveTips ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... HideTips ...
+-------------------------------------------------------------------------------------------------*/
+.bte_hideTips .tip-title {
+  display: none;
+}
+/* ... HideTips ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... Style ...
+-------------------------------------------------------------------------------------------------*/
+.bte_style {
+  background: #161514;
+}
+.bte_style #header {
+  margin: 0 auto;
+  padding: 19px 0;
+  background: -webkit-linear-gradient(top, #161514 89px, rgba(22, 21, 20, 0));
+  background:    -moz-linear-gradient(top, #161514 89px, rgba(22, 21, 20, 0));
+  background:     -ms-linear-gradient(top, #161514 89px, rgba(22, 21, 20, 0));
+  background:      -o-linear-gradient(top, #161514 89px, rgba(22, 21, 20, 0));
+  background: linear-gradient(to bottom, #161514 89px, rgba(22, 21, 20, 0));
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+  width: 960px;
+  border: 0 none;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+  border-radius: 0;
+  max-height: 70px;
+}
+.bte_style.bte_fixHeader #header:before {
+  display: none;
+}
+.bte_style.bte_fixHeader #container {
+  border-top: 108px solid transparent;
+}
+.bte_style #header h1,
+.bte_style #tl_navigation h1,
+.bte_style h1.main_headline {
+  background: -webkit-linear-gradient(top, #E57F1A 0px, #B05701 22px, #fff 22px, #fff 23px, #B05701 23px);
+  background:    -moz-linear-gradient(top, #E57F1A 0px, #B05701 22px, #fff 22px, #fff 23px, #B05701 23px);
+  background:     -ms-linear-gradient(top, #E57F1A 0px, #B05701 22px, #fff 22px, #fff 23px, #B05701 23px);
+  background:      -o-linear-gradient(top, #E57F1A 0px, #B05701 22px, #fff 22px, #fff 23px, #B05701 23px);
+  background: linear-gradient(to bottom, #E57F1A 0px, #B05701 22px, #fff 22px, #fff 23px, #B05701 23px);
+  text-transform: uppercase;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  font-weight: normal;
+  height: 24px;
+  line-height: 23px;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin: 0;
+  border: 0 solid #fff;
+  border-width: 2px 2px 0;
+}
+.bte_style #header > div {
+  background: url(logo-contao.png) no-repeat 0 center #fff;
+  -webkit-background-size: contain;
+  background-size: contain;
+  -webkit-border-radius: 0 0 3px 3px;
+     -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+  min-height: 44px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.bte_style #header > div span {
+  display: inline-block;
+  position: relative;
+}
+.bte_style.bte_fixTop #header > div span {
+  left: 10px;
+  top: -30px;
+}
+.bte_style #header > div span a {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+}
+.bte_style.bte_fixTop #header > div span a {
+  background-image: none;
+  margin: 0 0 0 -4px;
+  padding: 0 15px;
+}
+.bte_style.bte_fixTop #header > div span a:focus,
+.bte_style.bte_fixTop #header > div span a:hover,
+.bte_style.bte_fixTop #header > div span a:active {
+  color: #B05701;
+  background: #fff;
+  outline: 0 none;
+}
+.bte_style #left {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+  border: 0 none;
+  width: 205px;
+}
+.bte_style #main {
+  border: 0 solid transparent;
+  border-width: 0 0 1px; /** firefox patch */
+  padding: 0;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+  width: 745px;
+/**   overflow: hidden; */
+}
+.bte_style.bte_fixTop .tl_formbody_submit {
+  top: 47px;
+  padding: 6px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.bte_style.bte_fixHeader.bte_fixTop .tl_formbody_submit {
+  top: 56px;
+  padding: 0;
+  background-color: transparent;
+  border: 0 none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+}
+.bte_style.bte_fixTop .tl_formbody_submit .tl_submit_container {
+  border: 0 none;
+  background: transparent;
+  padding: 0;
+}
+#top.bte_style input.tl_submit,
+.bte_style .tl_permalert a {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: -webkit-linear-gradient(top, #C6F494, #427010);
+  background:    -moz-linear-gradient(top, #C6F494, #427010);
+  background:     -ms-linear-gradient(top, #C6F494, #427010);
+  background:      -o-linear-gradient(top, #C6F494, #427010);
+  background: linear-gradient(to bottom, #C6F494, #427010);
+  -webkit-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
+  color: #fff;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 12px;
+  text-shadow: none;
+}
+#top.bte_style input.tl_submit:focus,
+#top.bte_style input.tl_submit:hover,
+#top.bte_style input.tl_submit:active,
+.bte_style .tl_permalert a:focus,
+.bte_style .tl_permalert a:hover,
+.bte_style .tl_permalert a:active {
+  background: -webkit-linear-gradient(top, #B2E080, #2E5C00);
+  background:    -moz-linear-gradient(top, #B2E080, #2E5C00);
+  background:     -ms-linear-gradient(top, #B2E080, #2E5C00);
+  background:      -o-linear-gradient(top, #B2E080, #2E5C00);
+  background: linear-gradient(to bottom, #B2E080, #2E5C00);
+  outline: 0 none;
+}
+.bte_style .tl_error.tl_permalert a {
+  background: -webkit-linear-gradient(top, #FFDDDD, #CC0000);
+  background:    -moz-linear-gradient(top, #FFDDDD, #CC0000);
+  background:     -ms-linear-gradient(top, #FFDDDD, #CC0000);
+  background:      -o-linear-gradient(top, #FFDDDD, #CC0000);
+  background: linear-gradient(to bottom, #FFDDDD, #CC0000);
+}
+.bte_style .tl_error.tl_permalert a:focus,
+.bte_style .tl_error.tl_permalert a:hover,
+.bte_style .tl_error.tl_permalert a:active {
+  background: -webkit-linear-gradient(top, #FFB3B3, #A20000);
+  background:    -moz-linear-gradient(top, #FFB3B3, #A20000);
+  background:     -ms-linear-gradient(top, #FFB3B3, #A20000);
+  background:      -o-linear-gradient(top, #FFB3B3, #A20000);
+  background: linear-gradient(to bottom, #FFB3B3, #A20000);
+}
+#top.bte_style input.tl_submit:disabled {
+  background: #999;
+  color: #fff;
+  cursor: default;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+}
+.bte_style .tl_permalert {
+  position: absolute;
+  left: 55px;
+  top: 45px;
+  width: 150px;
+  height: 34px;
+  overflow: hidden;
+  border: 0 none;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding-top: 0;
+  z-index: 1;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+      -ms-hyphens: auto;
+  hyphens: auto;
+}
+.bte_style .tl_permalert:hover {
+  height: auto;
+  -webkit-box-shadow: 1px 1px 3px #666;
+     -moz-box-shadow: 1px 1px 3px #666;
+  box-shadow: 1px 1px 3px #666;
+  background: -webkit-linear-gradient(bottom, #333333, #666666 80%);
+  background:    -moz-linear-gradient(bottom, #333333, #666666 80%);
+  background:     -ms-linear-gradient(bottom, #333333, #666666 80%);
+  background:      -o-linear-gradient(bottom, #333333, #666666 80%);
+  background: linear-gradient(to top, #333333, #666666 80%);
+  color: #fff;
+}
+.bte_infoTop {
+  color: #c33;
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+}
+.bte_style .tl_permalert:hover .bte_infoTop {
+  color: #fff;
+}
+.bte_style .tl_permalert a {
+  margin: 0 0 7px;
+  padding-left: 0;
+  padding-right: 0;
+  float: none;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 23px;
+}
+.bte_style #container > .clear {
+  display: none;
+}
+.bte_style #footer a {
+  color: #999;
+}
+.bte_style #footer a:hover {
+  color: #fff;
+}
+/* open|closed */
+.bte_style fieldset.bte_fs > legend {
+  color: #427010;
+  background: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  position: relative;
+}
+.bte_style .bte_fs > legend:before {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  border: 0 solid transparent;
+  border-top-color: #427010;
+  border-width: 6px 4px;
+  content: "";
+  opacity: .5;
+}
+/* closed */
+.bte_style fieldset.bte_fs.collapsed > legend {
+  color: #77AC45;
+}
+.bte_style .bte_fs.collapsed > legend:before {
+  border-top-color: transparent;
+  border-left-color: #77AC45;
+  border-width: 4px 6px;
+  top: 10px;
+}
+/* hover open|closed */
+.bte_style fieldset.bte_fs > legend:focus,
+.bte_style fieldset.bte_fs > legend:active,
+.bte_style fieldset.bte_fs > legend:hover {
+  color: #555;
+}
+.bte_style .bte_fs > legend:hover:before {
+  border-top-color: #555;
+}
+/* hover closed */
+.bte_style fieldset.bte_fs > legend:focus,
+.bte_style fieldset.bte_fs > legend:active,
+.bte_style fieldset.bte_fs > legend:hover {
+  color: #555;
+}
+.bte_style .bte_fs.collapsed > legend:hover:before {
+  border-top-color: transparent;
+  border-left-color: #555;
+}
+/* ... Style ... END
+-------------------------------------------------------------------------------------------------*/
+
+
+
+/* ... Datepicker patch (datepicker_bootstrap for datepicker_dashboard) ...
+-------------------------------------------------------------------------------------------------*/
+.selected-button,
+.datepicker_bootstrap .days .day.selected,
+.datepicker_bootstrap .days .day.selected:hover,
+.datepicker_bootstrap .months .month.selected,
+.datepicker_bootstrap .months .month.selected:hover,
+.datepicker_bootstrap .years .year.selected,
+.datepicker_bootstrap .years .year.selected:hover {
+  background-color: #049cdb;
+  color: #fff;
+}
+.datepicker_bootstrap {
+  position: absolute;
+  width: 18em;
+  padding: 0.3em;
+  font-size: 1em;
+  background-color: #fff;
+  color: #000;
+  line-height: normal;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: .2727em;
+     -moz-border-radius: .2727em;
+  border-radius: .2727em;
+}
+.datepicker_bootstrap .header {
+  text-align: center;
+  border-bottom: inset 1px rgba(204, 204, 204, 0.55);
+  padding-bottom: 0.3em;
+  font-weight: bold;
+}
+.datepicker_bootstrap .header .title {
+  text-align: center;
+  margin: auto;
+  display: inline-block;
+}
+.datepicker_bootstrap .header .title .titleText {
+  margin: auto;
+  padding: 0.5em;
+  -webkit-border-radius: .2727em;
+     -moz-border-radius: .2727em;
+  border-radius: .2727em;
+}
+.datepicker_bootstrap .header .title .titleText:hover {
+  background-color: #eee;
+}
+.datepicker_bootstrap .header .previous,
+.datepicker_bootstrap .header .next {
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  top: 1em;
+  display: block;
+  border-top: 6px solid #fff;
+  border-bottom: 6px solid #fff;
+  height: 0;
+}
+.datepicker_bootstrap .header .previous {
+  left: 0.4em;
+  border-right: 7px solid #000;
+}
+.datepicker_bootstrap .header .previous:hover {
+  border-right-color: #eee;
+}
+.datepicker_bootstrap .header .next {
+  right: 0.4em;
+  border-left: 7px solid #000;
+}
+.datepicker_bootstrap .header .next:hover {
+  border-left-color: #999;
+}
+.datepicker_bootstrap .header .closeButton {
+  display: none;
+}
+.datepicker_bootstrap .body {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 15.5em;
+  overflow: hidden;
+  margin-top: 0.2em;
+}
+.datepicker_bootstrap .body .slider > div {
+  height: 15.5em;
+}
+.datepicker_bootstrap .body .slider > div > div,
+.datepicker_bootstrap .body .slider > div table {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.datepicker_bootstrap .body .slider > div thead th {
+  height: 2em;
+}
+.datepicker_bootstrap .body .slider > div thead th:hover {
+  background-color: transparent;
+}
+.datepicker_bootstrap .days td {
+  width: 14.28571%;
+}
+.datepicker_bootstrap .days .otherMonth {
+  color: #999;
+}
+.datepicker_bootstrap .months td {
+  width: 33.33333%;
+}
+.datepicker_bootstrap .years td {
+  width: 25%;
+}
+.datepicker_bootstrap .days .day,
+.datepicker_bootstrap .months .month,
+.datepicker_bootstrap .years .year {
+  cursor: pointer;
+  -webkit-border-radius: .2727em;
+     -moz-border-radius: .2727em;
+  border-radius: .2727em;
+}
+.datepicker_bootstrap .days .day:hover,
+.datepicker_bootstrap .months .month:hover,
+.datepicker_bootstrap .years .year:hover {
+  background-color: #eee;
+}
+.datepicker_bootstrap .unavailable {
+  color: #eee !important;
+  cursor: default !important;
+  text-decoration: line-through;
+}
+.datepicker_bootstrap table {
+  border-spacing: 0;
+}
+.datepicker_bootstrap th,
+.datepicker_bootstrap td {
+  padding: 0;
+  text-align: inherit;
+}
+.datepicker_bootstrap .time {
+  position: relative;
+  width: 100%;
+  padding-top: 3em;
+  text-align: center;
+}
+.datepicker_bootstrap .time > div {
+  display: inline-block;
+}
+.datepicker_bootstrap .time .hour,
+.datepicker_bootstrap .time .separator,
+.datepicker_bootstrap .time .minutes {
+  width: 3em;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.2em;
+}
+.datepicker_bootstrap .time .separator {
+  width: 1em;
+}
+.datepicker_bootstrap .time .ok:active {
+  -webkit-box-shadow: inset 0 1px 5px #999;
+     -moz-box-shadow: inset 0 1px 5px #999;
+  box-shadow: inset 0 1px 5px #999;
+}
+.datepicker_bootstrap .time .ok:hover {
+  background-color: #eee;
+}
+.datepicker_bootstrap .time .ok {
+  margin: 1em auto;
+  display: block;
+  font-size: 1.5em;
+  width: 5em;
+  text-align: center;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+  box-shadow: none;
+  border: solid 1px #ccc;
+  outline: none;
+  background-color: white;
+  -webkit-border-radius: .2727em;
+     -moz-border-radius: .2727em;
+  border-radius: .2727em;
+}
+/* ... Datepicker patch ... END
+-------------------------------------------------------------------------------------------------*/
